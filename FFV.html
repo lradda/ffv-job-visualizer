@@ -1,0 +1,174 @@
+<html>   
+    <head>
+        <title>Final Fantasy V Job Visualizer</title>
+        <link rel="icon" href="images/icon.gif"/>
+        <script src="javascript/FFV.js"></script>
+    </head>    
+
+    <body>
+        <img id="Bartz" src="images/Bartz/Freelancer.gif"/>
+        <img id="Lenna" src="images/Lenna/Freelancer.gif"/>
+        <img id="Galuf" src="images/Galuf/Freelancer.gif"/>
+        <img id="Faris" src="images/Faris/Freelancer.gif"/>
+        <img id="Krile" src="images/Krile/Freelancer.gif" style="display:none" />
+
+        <br><br>
+        <input type="radio" name="GalufKrileSelector" value="Galuf" checked="checked" onchange="swapGalufKrile(this)"/>Galuf
+        <input type="radio" name="GalufKrileSelector" value="Krile" onchange="swapGalufKrile(this)"/>Krile
+        <input type="radio" name="GalufKrileSelector" value="Both" onchange="swapGalufKrile(this)"/>Both
+
+        <br><br>
+        <span id="BartzName" style="font-family:'Courier New'">Bartz</span>
+        <select id="BartzJob" onchange="changeJob('Bartz')">   
+            <option value="Freelancer">Freelancer</option>
+            <option value="Knight">Knight</option>
+            <option value="Monk">Monk</option>
+            <option value="Thief">Thief</option>
+            <option value="Black Mage">Black Mage</option>
+            <option value="White Mage">White Mage</option>            
+            <option value="Blue Mage">Blue Mage</option>
+            <option value="Red Mage">Red Mage</option>
+            <option value="Time Mage">Time Mage</option>
+            <option value="Summoner">Summoner</option>
+            <option value="Berserker">Berserker</option>
+            <option value="Mystic Knight">Mystic Knight</option>
+            <option value="Beastmaster">Beastmaster</option>
+            <option value="Geomancer">Geomancer</option>
+            <option value="Ninja">Ninja</option>
+            <option value="Ranger">Ranger</option>            
+            <option value="Bard">Bard</option>
+            <option value="Dragoon">Dragoon</option>
+            <option value="Dancer">Dancer</option>
+            <option value="Samurai">Samurai</option>
+            <option value="Chemist">Chemist</option>
+            <option value="Mime">Mime</option>
+            <option value="Gladiator">Gladiator</option>
+            <option value="Oracle">Oracle</option>
+            <option value="Cannoneer">Cannoneer</option>
+            <option value="Necromancer">Necromancer</option>
+        </select>
+
+        <br>
+        <span id="LennaName" style="font-family:'Courier New'">Lenna</span>
+        <select id="LennaJob" onchange="changeJob('Lenna')">   
+            <option value="Freelancer">Freelancer</option>
+            <option value="Knight">Knight</option>
+            <option value="Monk">Monk</option>
+            <option value="Thief">Thief</option>
+            <option value="Black Mage">Black Mage</option>
+            <option value="White Mage">White Mage</option>            
+            <option value="Blue Mage">Blue Mage</option>
+            <option value="Red Mage">Red Mage</option>
+            <option value="Time Mage">Time Mage</option>
+            <option value="Summoner">Summoner</option>
+            <option value="Berserker">Berserker</option>
+            <option value="Mystic Knight">Mystic Knight</option>
+            <option value="Beastmaster">Beastmaster</option>
+            <option value="Geomancer">Geomancer</option>
+            <option value="Ninja">Ninja</option>
+            <option value="Ranger">Ranger</option>            
+            <option value="Bard">Bard</option>
+            <option value="Dragoon">Dragoon</option>
+            <option value="Dancer">Dancer</option>
+            <option value="Samurai">Samurai</option>
+            <option value="Chemist">Chemist</option>
+            <option value="Mime">Mime</option>
+            <option value="Gladiator">Gladiator</option>
+            <option value="Oracle">Oracle</option>
+            <option value="Cannoneer">Cannoneer</option>
+            <option value="Necromancer">Necromancer</option>
+        </select>
+
+        <div id=GalufBlock display: style="display:inline">
+            <br>
+            <span id="GalufName" style="font-family:'Courier New'">Galuf</span>
+            <select id="GalufJob" onchange="changeJob('Galuf')">   
+                <option value="Freelancer">Freelancer</option>
+                <option value="Knight">Knight</option>
+                <option value="Monk">Monk</option>
+                <option value="Thief">Thief</option>
+                <option value="Black Mage">Black Mage</option>
+                <option value="White Mage">White Mage</option>            
+                <option value="Blue Mage">Blue Mage</option>
+                <option value="Red Mage">Red Mage</option>
+                <option value="Time Mage">Time Mage</option>
+                <option value="Summoner">Summoner</option>
+                <option value="Berserker">Berserker</option>
+                <option value="Mystic Knight">Mystic Knight</option>
+                <option value="Beastmaster">Beastmaster</option>
+                <option value="Geomancer">Geomancer</option>
+                <option value="Ninja">Ninja</option>
+                <option value="Ranger">Ranger</option>            
+                <option value="Bard">Bard</option>
+                <option value="Dragoon">Dragoon</option>
+                <option value="Dancer">Dancer</option>
+                <option value="Samurai">Samurai</option>
+                <option value="Chemist">Chemist</option>
+            </select>
+        </div>
+
+        <br>
+        <span id="FarisName" style="font-family:'Courier New'">Faris</span>
+        <select id="FarisJob" onchange="changeJob('Faris')">   
+            <option value="Freelancer">Freelancer</option>
+            <option value="Knight">Knight</option>
+            <option value="Monk">Monk</option>
+            <option value="Thief">Thief</option>
+            <option value="Black Mage">Black Mage</option>
+            <option value="White Mage">White Mage</option>            
+            <option value="Blue Mage">Blue Mage</option>
+            <option value="Red Mage">Red Mage</option>
+            <option value="Time Mage">Time Mage</option>
+            <option value="Summoner">Summoner</option>
+            <option value="Berserker">Berserker</option>
+            <option value="Mystic Knight">Mystic Knight</option>
+            <option value="Beastmaster">Beastmaster</option>
+            <option value="Geomancer">Geomancer</option>
+            <option value="Ninja">Ninja</option>
+            <option value="Ranger">Ranger</option>            
+            <option value="Bard">Bard</option>
+            <option value="Dragoon">Dragoon</option>
+            <option value="Dancer">Dancer</option>
+            <option value="Samurai">Samurai</option>
+            <option value="Chemist">Chemist</option>
+            <option value="Mime">Mime</option>
+            <option value="Gladiator">Gladiator</option>
+            <option value="Oracle">Oracle</option>
+            <option value="Cannoneer">Cannoneer</option>
+            <option value="Necromancer">Necromancer</option>
+        </select>
+
+        <div id="KrileBlock" style="display:none">
+            <br>
+            <span id="KrileName" style="font-family:'Courier New'">Krile</span>
+            <select id="KrileJob" onchange="changeJob('Krile')">   
+                <option value="Freelancer">Freelancer</option>
+                <option value="Knight">Knight</option>
+                <option value="Monk">Monk</option>
+                <option value="Thief">Thief</option>
+                <option value="Black Mage">Black Mage</option>
+                <option value="White Mage">White Mage</option>            
+                <option value="Blue Mage">Blue Mage</option>
+                <option value="Red Mage">Red Mage</option>
+                <option value="Time Mage">Time Mage</option>
+                <option value="Summoner">Summoner</option>
+                <option value="Berserker">Berserker</option>
+                <option value="Mystic Knight">Mystic Knight</option>
+                <option value="Beastmaster">Beastmaster</option>
+                <option value="Geomancer">Geomancer</option>
+                <option value="Ninja">Ninja</option>
+                <option value="Ranger">Ranger</option>            
+                <option value="Bard">Bard</option>
+                <option value="Dragoon">Dragoon</option>
+                <option value="Dancer">Dancer</option>
+                <option value="Samurai">Samurai</option>
+                <option value="Chemist">Chemist</option>
+                <option value="Mime">Mime</option>
+                <option value="Gladiator">Gladiator</option>
+                <option value="Oracle">Oracle</option>
+                <option value="Cannoneer">Cannoneer</option>
+                <option value="Necromancer">Necromancer</option>
+            </select>
+        </div>
+    </body> 
+</html> 
